@@ -6,17 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet" />
     <title>Bank Account App</title>
   </head>
   <body>
     <div class="container">
       <div class="account">
         <h2>Your Account</h2>
-        <p class="account__balance"></p>
-        <form action="">
-          <label for="input">How much would you like to deposit or withdrawal</label>
-          <input id="input" name="input" type="text" />
+        <p class="account__balance">0</p>
+        <form action="#">
+          <label for="input">How much would you like to deposit or withdrawal:</label> <br />
+          <input id="input" name="input" type="text" placeholder="Enter amount.." />
         </form>
+        <div class="buttons">
+          <button class="btn deposit">Deposit</button>
+          <button class="btn withdrawal">Withdrawal</button>
+        </div>
       </div>
     </div>
     <script src="bank.js"></script>
