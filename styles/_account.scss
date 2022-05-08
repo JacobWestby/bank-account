@@ -78,4 +78,15 @@
 
         }
     }
+
+    .hidden {
+        color: rgb(188, 12, 12);
+        display: none;
+    }
+
+    .errorActive {
+        color: rgb(188, 12, 12);
+        display: inline;
+
+    }
 }

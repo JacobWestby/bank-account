@@ -18,8 +18,10 @@
         <p class="account__balance">0</p>
         <form action="#">
           <label for="input">How much would you like to deposit or withdrawal:</label> <br />
-          <input id="input" name="input" type="text" placeholder="Enter amount.." />
+          <input id="input" name="input" type="text" placeholder="Enter amount.." autocomplete="off" />
         </form>
+        <span class="hidden">Sorry invalid input.</span>
+
         <div class="buttons">
           <button class="btn deposit">Deposit</button>
           <button class="btn withdrawal">Withdrawal</button>

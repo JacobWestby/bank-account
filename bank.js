@@ -1,21 +1,51 @@
 let balance = document.querySelector(".account__balance").innerHTML;
-let input = document.querySelector("#input").value;
+balance = parseInt(balance);
 
-const account = {
-    deposit: function () {
-    },
+const depositMoney = document.querySelector(".deposit");
+const withdrawalMoney = document.querySelector(".withdrawal");
 
-    withdrawal: function () {
-    },
 
-    accountError: function () {
-    },
-}
-
-function atm() {
+function accountError() {
+    if (document.querySelector(".hidden").className === "hidden") {
+        document.querySelector(".hidden").className = "errorActive";
+    }
 };
 
-atm();
+function removeError() {
+    if (document.querySelector(".errorActive").className === "errorActive") {
+        document.querySelector(".errorActive").className = "hidden";
+    };
+};
 
-console.log(balance);
-console.log(input);
+
+function bank() {
+    depositMoney.addEventListener("click", (event) => {
+        let input = document.querySelector("#input").value;
+
+        input = parseInt(input);
+
+        if (typeof input === 'number' && input !== isNaN(input) && event && input > 0) {
+            document.querySelector(".account__balance").innerHTML = balance += input;
+            document.querySelector("#input").value = "";
+            setInterval(removeError(), 5000);
+        } else {
+            accountError();
+        };
+    });
+
+    withdrawalMoney.addEventListener("click", (event) => {
+        let input = document.querySelector("#input").value;
+
+        input = parseInt(input);
+
+        if (typeof input === 'number' && input !== isNaN(input) && event && input <= balance) {
+            document.querySelector(".account__balance").innerHTML = balance -= input;
+            document.querySelector("#input").value = "";
+            setInterval(removeError(), 5000);
+        } else {
+            accountError();
+        }
+    });
+};
+
+bank();
