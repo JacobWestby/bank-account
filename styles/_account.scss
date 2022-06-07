@@ -1,0 +1,92 @@
+.container {
+    width: 30%;
+    height: 40%;
+}
+
+.account {
+    background-color: rgb(68, 215, 252);
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    h2 {
+        font-weight: 400;
+    }
+
+    &__balance {
+        font-size: 20px;
+        font-weight: 500;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.444);
+    }
+
+    form {
+        min-height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        label {
+            color: rgba(0, 0, 0, 0.62);
+        }
+        
+        #input {
+            height: 30px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.683);
+            border-radius: 3px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+    }
+
+    .buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        .btn {
+            height: 30px;
+            width: 48%;
+            border: none;
+            border-radius: 3px;
+            transition: all ease-in-out 0.1s;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+        }
+
+        .deposit {
+            background-color: rgb(69, 101, 244);
+            color: aliceblue;
+        }
+
+        .deposit:hover {
+            background-color: rgb(3, 47, 240);
+        }
+
+        .withdrawal {
+            background-color: rgb(255, 173, 51);
+            color: aliceblue;
+        }
+
+        .withdrawal:hover {
+            background-color: rgb(230, 140, 4);
+
+        }
+    }
+
+    .hidden {
+        color: rgb(188, 12, 12);
+        display: none;
+    }
+
+    .errorActive {
+        color: rgb(188, 12, 12);
+        display: inline;
+
+    }
+}
